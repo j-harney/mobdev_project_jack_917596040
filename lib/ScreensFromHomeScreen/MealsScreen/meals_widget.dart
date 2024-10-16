@@ -62,38 +62,20 @@ class MealsScreen extends StatelessWidget {
             ]),
         body: Column(children: <Widget>[
           Expanded(
-              child: Padding(
-                  padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-                  child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: <Widget>[
-                        Expanded(
-                            child: Container(
-                                decoration: BoxDecoration(
-                                    border: Border.all(
-                                        color: Colors.black, width: 3)),
-                                margin: const EdgeInsets.all(20),
-                                alignment: Alignment.center,
-                                child: const Text('Image'))),
-                        Expanded(
-                            child: Container(
-                                margin: const EdgeInsets.all(20),
-                                child: Column(children: <Widget>[
-                                  Container(
-                                      margin: const EdgeInsets.fromLTRB(
-                                          0, 5, 0, 10),
-                                      child: const Text(
-                                          'Random Meal of The Week',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.bold))),
-                                  Container(
-                                      child: const Text(
-                                          'This is a description of the random meal of the week.',
-                                          style: TextStyle(fontSize: 12)))
-                                ])))
-                      ]))),
+              child: Container(
+                  margin: const EdgeInsets.all(20),
+                  child: Column(children: <Widget>[
+                    Container(
+                        margin: const EdgeInsets.fromLTRB(0, 5, 0, 10),
+                        child: const Text('Random Meal of The Week',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontSize: 24, fontWeight: FontWeight.bold))),
+                    Container(
+                        child: const Text(
+                            'This is a description of the random meal of the week.',
+                            style: TextStyle(fontSize: 16))),
+                  ]))),
           Expanded(
               child: Padding(
                   padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
@@ -108,8 +90,7 @@ class MealsScreen extends StatelessWidget {
                                     style: ElevatedButton.styleFrom(
                                         side: const BorderSide(
                                             width: 1, color: Colors.black),
-                                        backgroundColor: const Color.fromARGB(
-                                            255, 255, 145, 0),
+                                        backgroundColor: Colors.orange,
                                         shape: const BeveledRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.all(Radius.zero))),
@@ -118,7 +99,7 @@ class MealsScreen extends StatelessWidget {
                                         style: TextStyle(
                                             fontSize: 24,
                                             color: Color.fromARGB(
-                                                255, 0, 0, 0)))))),
+                                                255, 255, 255, 255)))))),
                         Expanded(
                             child: Container(
                                 margin: EdgeInsets.fromLTRB(10, 0, 20, 0),
@@ -154,11 +135,11 @@ class MealsScreen extends StatelessWidget {
                                         side: const BorderSide(
                                             width: 1, color: Colors.black),
                                         backgroundColor: const Color.fromARGB(
-                                            255, 255, 0, 0),
+                                            255, 82, 153, 0),
                                         shape: const BeveledRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.all(Radius.zero))),
-                                    child: const Text('Meat Meals',
+                                    child: const Text('Breakfast',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                             fontSize: 20,
@@ -173,11 +154,11 @@ class MealsScreen extends StatelessWidget {
                                         side: const BorderSide(
                                             width: 1, color: Colors.black),
                                         backgroundColor: const Color.fromARGB(
-                                            255, 10, 107, 51),
+                                            255, 32, 135, 194),
                                         shape: const BeveledRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.all(Radius.zero))),
-                                    child: const Text('Veggie Meals',
+                                    child: const Text('Lunch',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                             fontSize: 20,
@@ -192,11 +173,11 @@ class MealsScreen extends StatelessWidget {
                                         side: const BorderSide(
                                             width: 1, color: Colors.black),
                                         backgroundColor: const Color.fromARGB(
-                                            255, 23, 149, 187),
+                                            255, 158, 28, 99),
                                         shape: const BeveledRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.all(Radius.zero))),
-                                    child: const Text('Other Meals',
+                                    child: const Text('Dinner',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                             fontSize: 20,
