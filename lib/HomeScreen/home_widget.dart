@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:project1_mobdev_jack_917596040/DrawerCreator/drawerCreator_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    DrawerCreator drawerCreator = DrawerCreator();
+
     List<String> buttonsText = [
       'Meals',
       'Other Help',
@@ -55,32 +58,7 @@ class HomeScreen extends StatelessWidget {
         drawer: Drawer(
           child: ListView(
             padding: EdgeInsets.zero,
-            children: <Widget>[
-              SizedBox(
-                  height: 100,
-                  child: DrawerHeader(
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                    ),
-                    child: Container(
-                        alignment: Alignment.center,
-                        child: const Text(
-                            style: TextStyle(fontSize: 24, color: Colors.white),
-                            'ListenToElders')),
-                  )),
-              ListTile(
-                title: const Text('Meals'),
-                onTap: () {
-                  Navigator.popAndPushNamed(context, '/meals');
-                },
-              ),
-              ListTile(
-                title: const Text('Other Help'),
-                onTap: () {
-                  Navigator.popAndPushNamed(context, '/nearme');
-                },
-              ),
-            ],
+            children: drawerCreator.createDrawer(context, 'Home'),
           ),
         ),
         appBar: AppBar(

@@ -1,42 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:project1_mobdev_jack_917596040/DrawerCreator/drawerCreator_widget.dart';
 
 class MealsScreen extends StatelessWidget {
   const MealsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    DrawerCreator drawerCreator = DrawerCreator();
+
     return Scaffold(
         drawer: Drawer(
           child: ListView(
             padding: EdgeInsets.zero,
-            children: <Widget>[
-              SizedBox(
-                  height: 100,
-                  child: DrawerHeader(
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                    ),
-                    child: Container(
-                        alignment: Alignment.center,
-                        child: const Text(
-                            style: TextStyle(fontSize: 24, color: Colors.white),
-                            'ListenToElders')),
-                  )),
-              ListTile(
-                title: const Text('Home'),
-                onTap: () {
-                  Navigator.popAndPushNamed(context, '/home');
-                },
-              ),
-              ListTile(
-                title: const Text('Other Help'),
-                onTap: () {
-                  // Update the state of the app
-                  // Then close the drawer
-                  Navigator.pop(context);
-                },
-              ),
-            ],
+            children: drawerCreator.createDrawer(context, 'Meals'),
           ),
         ),
         appBar: AppBar(
