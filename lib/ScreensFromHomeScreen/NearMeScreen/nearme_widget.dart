@@ -11,8 +11,8 @@ class NearMeScreen extends StatelessWidget {
     AppBarCreator appBarCreator = AppBarCreator();
 
     return Scaffold(
-      drawer: drawerCreator.createDrawer(context, 'Meals'),
-      appBar: appBarCreator.createAppBar(context, 'Meals'),
+      drawer: drawerCreator.createDrawer(context, 'Near Me'),
+      appBar: appBarCreator.createAppBar(context, 'Near Me'),
       body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
