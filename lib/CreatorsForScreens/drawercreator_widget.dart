@@ -29,6 +29,9 @@ class DrawerCreator {
       if (screenName != route) {
         var routeName = screenName.replaceAll(' ', '').toLowerCase();
         routeName = routeName.padLeft(routeName.length + 1, '/');
+        if (routeName == "/home") {
+          routeName = "/";
+        }
         widgets.add(ListTile(
             title: Text(screenName),
             onTap: () {
