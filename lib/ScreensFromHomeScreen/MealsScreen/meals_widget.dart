@@ -84,6 +84,7 @@ class MealsScreen extends StatelessWidget {
                                           0, 5, 0, 10),
                                       child: const Text(
                                           'Random Meal of The Week',
+                                          textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontSize: 16,
                                               fontWeight: FontWeight.bold))),
@@ -113,6 +114,7 @@ class MealsScreen extends StatelessWidget {
                                             borderRadius:
                                                 BorderRadius.all(Radius.zero))),
                                     child: const Text('Random Meal',
+                                        textAlign: TextAlign.center,
                                         style: TextStyle(
                                             fontSize: 24,
                                             color: Color.fromARGB(
@@ -131,6 +133,7 @@ class MealsScreen extends StatelessWidget {
                                             borderRadius:
                                                 BorderRadius.all(Radius.zero))),
                                     child: const Text('Order Meal',
+                                        textAlign: TextAlign.center,
                                         style: TextStyle(
                                             fontSize: 24,
                                             color: Color.fromARGB(
@@ -158,7 +161,7 @@ class MealsScreen extends StatelessWidget {
                                     child: const Text('Meat Meals',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
-                                            fontSize: 24,
+                                            fontSize: 20,
                                             color: Color.fromARGB(
                                                 255, 255, 255, 255)))))),
                         Expanded(
@@ -177,7 +180,7 @@ class MealsScreen extends StatelessWidget {
                                     child: const Text('Veggie Meals',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
-                                            fontSize: 24,
+                                            fontSize: 20,
                                             color: Color.fromARGB(
                                                 255, 255, 255, 255)))))),
                         Expanded(
@@ -196,7 +199,7 @@ class MealsScreen extends StatelessWidget {
                                     child: const Text('Other Meals',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
-                                            fontSize: 24,
+                                            fontSize: 20,
                                             color: Color.fromARGB(
                                                 255, 255, 255, 255))))))
                       ])))
