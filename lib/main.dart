@@ -1,3 +1,4 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:project1_mobdev_jack_917596040/ScreensFromHomeScreen/CalendarScreen/calendar_widget.dart';
 import 'package:project1_mobdev_jack_917596040/ScreensFromHomeScreen/EmergencyScreen/emergency_widget.dart';

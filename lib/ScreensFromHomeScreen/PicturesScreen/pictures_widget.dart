@@ -17,6 +17,49 @@ class _PicturesScreenState extends State<PicturesScreen> {
 
     return Scaffold(
         drawer: drawerCreator.createDrawer(context, 'Pictures'),
-        appBar: appBarCreator.createAppBar(context, 'Pictures'));
+        appBar: appBarCreator.createAppBar(context, 'Pictures'),
+        body: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Container(
+                  height: 100,
+                  width: 100,
+                  margin: EdgeInsets.all(5),
+                  child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                          side: const BorderSide(width: 1, color: Colors.black),
+                          backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+                          shape: const BeveledRectangleBorder(
+                              borderRadius: BorderRadius.all(Radius.zero))),
+                      child: const Text('Take Picture',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: 20,
+                              color: Color.fromARGB(255, 255, 255, 255))))),
+              Expanded(
+                  child: Container(
+                      margin: const EdgeInsets.all(20),
+                      child: Container(
+                          margin: const EdgeInsets.fromLTRB(0, 5, 0, 10),
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black))))),
+              Container(
+                  height: 100,
+                  width: 100,
+                  margin: EdgeInsets.all(5),
+                  child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                          side: const BorderSide(width: 1, color: Colors.black),
+                          backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+                          shape: const BeveledRectangleBorder(
+                              borderRadius: BorderRadius.all(Radius.zero))),
+                      child: const Text('Save Picture',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: 20,
+                              color: Color.fromARGB(255, 255, 255, 255)))))
+            ]));
   }
 }
