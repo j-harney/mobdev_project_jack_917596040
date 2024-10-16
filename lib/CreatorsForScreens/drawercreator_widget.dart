@@ -11,9 +11,9 @@ class DrawerCreator {
     'Emergency',
   ];
 
-  List<Widget> createDrawer(BuildContext context, String route) {
-    List<Widget> newDrawer = [];
-    newDrawer.add(SizedBox(
+  Drawer createDrawer(BuildContext context, String route) {
+    List<Widget> widgets = [];
+    widgets.add(SizedBox(
         height: 100,
         child: DrawerHeader(
           decoration: const BoxDecoration(
@@ -29,13 +29,15 @@ class DrawerCreator {
       if (screenName != route) {
         var routeName = screenName.replaceAll(' ', '').toLowerCase();
         routeName = routeName.padLeft(routeName.length + 1, '/');
-        newDrawer.add(ListTile(
+        widgets.add(ListTile(
             title: Text(screenName),
             onTap: () {
               Navigator.popAndPushNamed(context, routeName);
             }));
       }
     }
+    Drawer newDrawer =
+        Drawer(child: ListView(padding: EdgeInsets.zero, children: widgets));
     return newDrawer;
   }
 }

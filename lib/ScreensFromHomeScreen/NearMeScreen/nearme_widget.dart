@@ -1,64 +1,52 @@
 import 'package:flutter/material.dart';
+import 'package:project1_mobdev_jack_917596040/CreatorsForScreens/appBarCreator_widget.dart';
+import 'package:project1_mobdev_jack_917596040/CreatorsForScreens/drawercreator_widget.dart';
 
 class NearMeScreen extends StatelessWidget {
   const NearMeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    DrawerCreator drawerCreator = DrawerCreator();
+    AppBarCreator appBarCreator = AppBarCreator();
+
     return Scaffold(
-        drawer: Drawer(
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: <Widget>[
-              SizedBox(
-                  height: 100,
-                  child: DrawerHeader(
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                    ),
+      drawer: drawerCreator.createDrawer(context, 'Meals'),
+      appBar: appBarCreator.createAppBar(context, 'Meals'),
+      body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Expanded(
+                child: Container(
+                    margin: const EdgeInsets.all(20),
                     child: Container(
-                        alignment: Alignment.center,
-                        child: const Text(
-                            style: TextStyle(fontSize: 24, color: Colors.white),
-                            'ListenToElders')),
-                  )),
-              ListTile(
-                title: const Text('Home'),
-                onTap: () {
-                  Navigator.popAndPushNamed(context, '/home');
-                },
-              ),
-              ListTile(
-                title: const Text('Other Help'),
-                onTap: () {
-                  // Update the state of the app
-                  // Then close the drawer
-                  Navigator.pop(context);
-                },
-              ),
-            ],
-          ),
-        ),
-        appBar: AppBar(
-            backgroundColor: Colors.black,
-            title: const Text(
-                style: TextStyle(fontSize: 24, color: Colors.white),
-                'ListenToElders  |  Meals'),
-            centerTitle: true,
-            leading: Builder(builder: (context) {
-              return IconButton(
-                  icon: const Icon(Icons.menu, color: Colors.white),
-                  onPressed: () {
-                    Scaffold.of(context).openDrawer();
-                  });
-            }),
-            actions: <Widget>[
-              IconButton(
-                icon: const Icon(Icons.arrow_back, color: Colors.white),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-              )
-            ]));
+                        margin: const EdgeInsets.fromLTRB(0, 5, 0, 10),
+                        child: ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                                side: const BorderSide(
+                                    width: 1, color: Colors.black),
+                                backgroundColor:
+                                    const Color.fromARGB(255, 0, 0, 0),
+                                shape: const BeveledRectangleBorder(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.zero))),
+                            child: const Text('Find my facility',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold)))))),
+            Expanded(
+                child: Container(
+                    margin: const EdgeInsets.all(20),
+                    child: Container(
+                        margin: const EdgeInsets.fromLTRB(0, 5, 0, 10),
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black)),
+                        child:
+                            Image.network('https://i.imgur.com/tfmTXAk.png'))))
+          ]),
+    );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project1_mobdev_jack_917596040/DrawerCreator/drawerCreator_widget.dart';
+import 'package:project1_mobdev_jack_917596040/CreatorsForScreens/appBarCreator_widget.dart';
+import 'package:project1_mobdev_jack_917596040/CreatorsForScreens/drawercreator_widget.dart';
 
 class MealsScreen extends StatelessWidget {
   const MealsScreen({super.key});
@@ -7,35 +8,11 @@ class MealsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     DrawerCreator drawerCreator = DrawerCreator();
+    AppBarCreator appBarCreator = AppBarCreator();
 
     return Scaffold(
-        drawer: Drawer(
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: drawerCreator.createDrawer(context, 'Meals'),
-          ),
-        ),
-        appBar: AppBar(
-            backgroundColor: Colors.black,
-            title: const Text(
-                style: TextStyle(fontSize: 24, color: Colors.white),
-                'ListenToElders  |  Meals'),
-            centerTitle: true,
-            leading: Builder(builder: (context) {
-              return IconButton(
-                  icon: const Icon(Icons.menu, color: Colors.white),
-                  onPressed: () {
-                    Scaffold.of(context).openDrawer();
-                  });
-            }),
-            actions: <Widget>[
-              IconButton(
-                icon: const Icon(Icons.arrow_back, color: Colors.white),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-              )
-            ]),
+        drawer: drawerCreator.createDrawer(context, 'Meals'),
+        appBar: appBarCreator.createAppBar(context, 'Meals'),
         body: Column(children: <Widget>[
           Expanded(
               child: Container(

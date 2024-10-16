@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project1_mobdev_jack_917596040/DrawerCreator/drawerCreator_widget.dart';
+import 'package:project1_mobdev_jack_917596040/CreatorsForScreens/appBarCreator_widget.dart';
+import 'package:project1_mobdev_jack_917596040/CreatorsForScreens/drawercreator_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -7,6 +8,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     DrawerCreator drawerCreator = DrawerCreator();
+    AppBarCreator appBarCreator = AppBarCreator();
 
     List<String> buttonsText = [
       'Meals',
@@ -55,26 +57,8 @@ class HomeScreen extends StatelessWidget {
     }
 
     return Scaffold(
-        drawer: Drawer(
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: drawerCreator.createDrawer(context, 'Home'),
-          ),
-        ),
-        appBar: AppBar(
-          leading: Builder(builder: (context) {
-            return IconButton(
-                icon: const Icon(Icons.menu, color: Colors.white),
-                onPressed: () {
-                  Scaffold.of(context).openDrawer();
-                });
-          }),
-          backgroundColor: Colors.black,
-          title: const Text(
-              style: TextStyle(fontSize: 24, color: Colors.white),
-              'ListenToElders  |   Home'),
-          centerTitle: true,
-        ),
+        drawer: drawerCreator.createDrawer(context, 'Home'),
+        appBar: appBarCreator.createAppBar(context, 'Home'),
         body: Column(children: <Widget>[
           Expanded(
               child: Padding(
