@@ -40,12 +40,12 @@ class AuthGate extends StatelessWidget {
               );
             },
             sideBuilder: (context, shrinkOffset) {
-              return Padding(
-                padding: const EdgeInsets.all(20),
+              return const Padding(
+                padding: EdgeInsets.all(20),
                 child: AspectRatio(
                     aspectRatio: 1,
-                    child: const Icon(Icons.holiday_village_rounded,
-                        size: 300) ////0.21
+                    child:
+                        Icon(Icons.holiday_village_rounded, size: 300) ////0.21
                     ),
               );
             },

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project1_mobdev_jack_917596040/CreatorsForScreens/appBarCreator_widget.dart';
 import 'package:project1_mobdev_jack_917596040/CreatorsForScreens/drawercreator_widget.dart';
-import 'package:project1_mobdev_jack_917596040/HomeScreen/signout_button_widget.dart';
+import 'package:project1_mobdev_jack_917596040/Firebase/signout_button_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
       const Color.fromARGB(255, 89, 165, 128),
       const Color.fromARGB(255, 52, 117, 228),
       const Color.fromARGB(255, 85, 85, 85),
-      const Color.fromARGB(137, 32, 32, 32),
+      const Color.fromARGB(255, 22, 22, 22),
       const Color.fromARGB(255, 255, 27, 11)
     ];
 

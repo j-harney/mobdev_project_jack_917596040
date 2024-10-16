@@ -1,18 +1,23 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:project1_mobdev_jack_917596040/HomeScreen/signout_button_widget.dart'
+import 'package:project1_mobdev_jack_917596040/Firebase/signout_button_widget.dart'
     as button;
 
 class AppBarCreator {
   final FirebaseAuth auth = FirebaseAuth.instance;
 
   AppBar createAppBar(BuildContext context, String route) {
-    Text titleText = Text(
-        style: const TextStyle(fontSize: 24, color: Colors.white),
-        'ListenToElders  |   $route');
-    AppBar newAppBar;
+    String? username;
+    bool centerTitle;
 
+    if (auth.currentUser?.displayName == null) {
+      username = auth.currentUser!.email;
+    } else {
+      username = auth.currentUser!.displayName;
+    }
+
+    AppBar newAppBar;
     if (route == 'Home') {
       newAppBar = AppBar(
           leading: Builder(builder: (context) {
@@ -23,11 +28,15 @@ class AppBarCreator {
                 });
           }),
           backgroundColor: Colors.black,
-          title: titleText,
+          title: FittedBox(
+              child: Text('ListenToElders | $route',
+                  style: TextStyle(color: Colors.white))),
           centerTitle: true,
           actions: <Widget>[
-            Text('Hello, ${auth.currentUser?.displayName}',
-                style: TextStyle(color: Colors.white)),
+            Container(
+                margin: EdgeInsets.all(5),
+                child: Text('Hello, $username',
+                    style: TextStyle(color: Colors.white))),
             (button.SignOutButton()),
             IconButton(
                 icon: const Icon(Icons.person, color: Colors.white),
@@ -47,7 +56,9 @@ class AppBarCreator {
     } else {
       newAppBar = AppBar(
           backgroundColor: Colors.black,
-          title: titleText,
+          title: FittedBox(
+              child: Text('ListenToElders | $route',
+                  style: TextStyle(color: Colors.white))),
           centerTitle: true,
           leading: Builder(builder: (context) {
             return IconButton(
@@ -58,13 +69,12 @@ class AppBarCreator {
           }),
           actions: <Widget>[
             IconButton(
-              icon: const Icon(Icons.arrow_back, color: Colors.white),
+              icon: const Icon(Icons.arrow_back, color: Colors.white, size: 30),
               onPressed: () {
                 Navigator.of(context).pop();
               },
             ),
-            Text('Hello, ${auth.currentUser?.displayName}',
-                style: TextStyle(color: Colors.white)),
+            Text('Hello, $username', style: TextStyle(color: Colors.white)),
             (button.SignOutButton()),
             IconButton(
                 icon: const Icon(Icons.person, color: Colors.white),
@@ -91,11 +101,12 @@ class AppBarCreator {
     profileAppBar = AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.black,
-        title: Text('User Profile'),
+        title:
+            const Text('User Profile', style: TextStyle(color: Colors.white)),
         centerTitle: true,
         actions: <Widget>[
           IconButton(
-              icon: const Icon(Icons.arrow_back, color: Colors.white),
+              icon: const Icon(Icons.arrow_back, color: Colors.white, size: 30),
               onPressed: () {
                 Navigator.of(context).pop();
               })

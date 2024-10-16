@@ -97,12 +97,13 @@ class _MealsScreenState extends State<MealsScreen> {
                                         shape: const BeveledRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.all(Radius.zero))),
-                                    child: const Text('Breakfast',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 20,
-                                            color: Color.fromARGB(
-                                                255, 255, 255, 255)))))),
+                                    child: const FittedBox(
+                                        child: Text('Breakfast',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                color: Color.fromARGB(
+                                                    255, 255, 255, 255))))))),
                         Expanded(
                             child: Container(
                                 margin: EdgeInsets.all(5),
