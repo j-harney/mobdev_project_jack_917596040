@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:project1_mobdev_jack_917596040/CreatorsForScreens/appBarCreator_widget.dart';
 import 'package:project1_mobdev_jack_917596040/CreatorsForScreens/drawercreator_widget.dart';
 
-class EmergencyScreen extends StatelessWidget {
+class EmergencyScreen extends StatefulWidget {
   const EmergencyScreen({super.key});
 
+  @override
+  State<EmergencyScreen> createState() => _EmergencyScreenState();
+}
+
+class _EmergencyScreenState extends State<EmergencyScreen> {
   @override
   Widget build(BuildContext context) {
     DrawerCreator drawerCreator = DrawerCreator();

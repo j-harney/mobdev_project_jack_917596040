@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:project1_mobdev_jack_917596040/CreatorsForScreens/appBarCreator_widget.dart';
 import 'package:project1_mobdev_jack_917596040/CreatorsForScreens/drawercreator_widget.dart';
 
-class NearMeScreen extends StatelessWidget {
+class NearMeScreen extends StatefulWidget {
   const NearMeScreen({super.key});
 
+  @override
+  State<NearMeScreen> createState() => _NearMeScreenState();
+}
+
+class _NearMeScreenState extends State<NearMeScreen> {
   @override
   Widget build(BuildContext context) {
     DrawerCreator drawerCreator = DrawerCreator();

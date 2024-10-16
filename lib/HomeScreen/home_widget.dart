@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:project1_mobdev_jack_917596040/CreatorsForScreens/appBarCreator_widget.dart';
 import 'package:project1_mobdev_jack_917596040/CreatorsForScreens/drawercreator_widget.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     DrawerCreator drawerCreator = DrawerCreator();
