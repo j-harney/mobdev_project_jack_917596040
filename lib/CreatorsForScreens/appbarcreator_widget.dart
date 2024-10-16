@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
@@ -28,18 +29,29 @@ class AppBarCreator {
                 });
           }),
           backgroundColor: Colors.black,
-          title: FittedBox(
-              child: Text('ListenToElders | $route',
-                  style: TextStyle(color: Colors.white))),
+          title: AutoSizeText('ListenToElders | $route',
+              style: const TextStyle(fontSize: 24, color: Colors.white),
+              maxLines: 1,
+              minFontSize: 16,
+              maxFontSize: 24,
+              overflowReplacement: AutoSizeText('LTE | $route',
+                  style: const TextStyle(fontSize: 24, color: Colors.white),
+                  maxLines: 1,
+                  minFontSize: 12,
+                  maxFontSize: 24)),
           centerTitle: true,
           actions: <Widget>[
             Container(
-                margin: EdgeInsets.all(5),
+                margin: EdgeInsets.all(2),
                 child: Text('Hello, $username',
                     style: TextStyle(color: Colors.white))),
             (button.SignOutButton()),
             IconButton(
-                icon: const Icon(Icons.person, color: Colors.white),
+                icon: const Icon(
+                  Icons.person,
+                  color: Colors.white,
+                  size: 25,
+                ),
                 onPressed: () {
                   Navigator.push(
                       context,
@@ -56,9 +68,16 @@ class AppBarCreator {
     } else {
       newAppBar = AppBar(
           backgroundColor: Colors.black,
-          title: FittedBox(
-              child: Text('ListenToElders | $route',
-                  style: TextStyle(color: Colors.white))),
+          title: AutoSizeText('ListenToElders | $route',
+              style: const TextStyle(fontSize: 24, color: Colors.white),
+              maxLines: 1,
+              minFontSize: 16,
+              maxFontSize: 24,
+              overflowReplacement: AutoSizeText('$route',
+                  style: const TextStyle(fontSize: 24, color: Colors.white),
+                  maxLines: 1,
+                  minFontSize: 12,
+                  maxFontSize: 24)),
           centerTitle: true,
           leading: Builder(builder: (context) {
             return IconButton(
@@ -106,7 +125,7 @@ class AppBarCreator {
         centerTitle: true,
         actions: <Widget>[
           IconButton(
-              icon: const Icon(Icons.arrow_back, color: Colors.white, size: 30),
+              icon: const Icon(Icons.arrow_back, color: Colors.white, size: 25),
               onPressed: () {
                 Navigator.of(context).pop();
               })

@@ -28,6 +28,6 @@ class SignOutButton extends StatelessWidget {
           FirebaseUIAuth.signOut(context: context, auth: auth);
           Navigator.pushReplacementNamed(context, '/');
         },
-        child: const Text("Sign Out", style: TextStyle(color: Colors.white)));
+        child: const Icon(Icons.logout_sharp, size: 25, color: Colors.white));
   }
 }
