@@ -101,7 +101,7 @@ class MealsScreen extends StatelessWidget {
                       children: <Widget>[
                         Expanded(
                             child: Container(
-                                margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                                margin: const EdgeInsets.fromLTRB(20, 0, 10, 0),
                                 child: ElevatedButton(
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
@@ -119,6 +119,7 @@ class MealsScreen extends StatelessWidget {
                                                 255, 0, 0, 0)))))),
                         Expanded(
                             child: Container(
+                                margin: EdgeInsets.fromLTRB(10, 0, 20, 0),
                                 child: ElevatedButton(
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
