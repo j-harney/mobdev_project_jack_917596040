@@ -29,7 +29,7 @@ class _NearMeScreenState extends State<NearMeScreen> {
 
   _getUserLocation() async {
     bool serviceEnabled;
-    LocationPermission permission;
+    LocationPermission permission = LocationPermission.denied;
 // Check if location services are enabled
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
