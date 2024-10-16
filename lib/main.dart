@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Login Page', home: AuthGate(), routes: {
+    return MaterialApp(title: 'Login Page', home: const AuthGate(), routes: {
       '/meals': (context) => const MealsScreen(),
       '/nearme': (context) => const NearMeScreen(),
       '/calendar': (context) => const CalendarScreen(),

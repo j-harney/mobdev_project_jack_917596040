@@ -10,7 +10,6 @@ class AppBarCreator {
 
   AppBar createAppBar(BuildContext context, String route) {
     String? username;
-    bool centerTitle;
 
     if (auth.currentUser?.displayName == null) {
       username = auth.currentUser!.email;
@@ -42,10 +41,10 @@ class AppBarCreator {
           centerTitle: true,
           actions: <Widget>[
             Container(
-                margin: EdgeInsets.all(2),
+                margin: const EdgeInsets.all(2),
                 child: Text('Hello, $username',
-                    style: TextStyle(color: Colors.white))),
-            (button.SignOutButton()),
+                    style: const TextStyle(color: Colors.white))),
+            (const button.SignOutButton()),
             IconButton(
                 icon: const Icon(
                   Icons.person,
@@ -60,7 +59,8 @@ class AppBarCreator {
                                   appBar: createProfileAppBar(context),
                                   actions: [
                                     SignedOutAction((context) {
-                                      Navigator.of(context).pop();
+                                      Navigator.of(context)
+                                          .pushReplacementNamed('/');
                                     })
                                   ])));
                 }),
@@ -73,7 +73,7 @@ class AppBarCreator {
               maxLines: 1,
               minFontSize: 16,
               maxFontSize: 24,
-              overflowReplacement: AutoSizeText('$route',
+              overflowReplacement: AutoSizeText(route,
                   style: const TextStyle(fontSize: 24, color: Colors.white),
                   maxLines: 1,
                   minFontSize: 12,
@@ -93,8 +93,9 @@ class AppBarCreator {
                 Navigator.of(context).pop();
               },
             ),
-            Text('Hello, $username', style: TextStyle(color: Colors.white)),
-            (button.SignOutButton()),
+            Text('Hello, $username',
+                style: const TextStyle(color: Colors.white)),
+            (const button.SignOutButton()),
             IconButton(
                 icon: const Icon(Icons.person, color: Colors.white),
                 onPressed: () {
@@ -105,7 +106,8 @@ class AppBarCreator {
                                   appBar: createProfileAppBar(context),
                                   actions: [
                                     SignedOutAction((context) {
-                                      Navigator.of(context).pop();
+                                      Navigator.of(context)
+                                          .pushReplacementNamed('/');
                                     })
                                   ])));
                 })

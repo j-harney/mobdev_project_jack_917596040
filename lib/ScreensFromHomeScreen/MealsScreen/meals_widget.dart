@@ -29,10 +29,9 @@ class _MealsScreenState extends State<MealsScreen> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize: 24, fontWeight: FontWeight.bold))),
-                    Container(
-                        child: const Text(
-                            'This is a description of the random meal of the week.',
-                            style: TextStyle(fontSize: 16))),
+                    const Text(
+                        'This is a description of the random meal of the week.',
+                        style: TextStyle(fontSize: 16)),
                   ]))),
           Expanded(
               child: Padding(
@@ -60,7 +59,7 @@ class _MealsScreenState extends State<MealsScreen> {
                                                 255, 255, 255, 255)))))),
                         Expanded(
                             child: Container(
-                                margin: EdgeInsets.fromLTRB(10, 0, 20, 0),
+                                margin: const EdgeInsets.fromLTRB(10, 0, 20, 0),
                                 child: ElevatedButton(
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
@@ -86,7 +85,7 @@ class _MealsScreenState extends State<MealsScreen> {
                       children: <Widget>[
                         Expanded(
                             child: Container(
-                                margin: EdgeInsets.all(5),
+                                margin: const EdgeInsets.all(5),
                                 child: ElevatedButton(
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
@@ -106,7 +105,7 @@ class _MealsScreenState extends State<MealsScreen> {
                                                     255, 255, 255, 255))))))),
                         Expanded(
                             child: Container(
-                                margin: EdgeInsets.all(5),
+                                margin: const EdgeInsets.all(5),
                                 child: ElevatedButton(
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
@@ -125,7 +124,7 @@ class _MealsScreenState extends State<MealsScreen> {
                                                 255, 255, 255, 255)))))),
                         Expanded(
                             child: Container(
-                                margin: EdgeInsets.all(5),
+                                margin: const EdgeInsets.all(5),
                                 child: ElevatedButton(
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(

@@ -26,7 +26,7 @@ class _EmergencyScreenState extends State<EmergencyScreen> {
                     children: <Widget>[
                       Expanded(
                           child: Container(
-                              margin: EdgeInsets.all(5),
+                              margin: const EdgeInsets.all(5),
                               child: ElevatedButton(
                                   onPressed: () {},
                                   style: ElevatedButton.styleFrom(
@@ -45,7 +45,7 @@ class _EmergencyScreenState extends State<EmergencyScreen> {
                                               255, 255, 255, 255)))))),
                       Expanded(
                           child: Container(
-                              margin: EdgeInsets.all(5),
+                              margin: const EdgeInsets.all(5),
                               child: ElevatedButton(
                                   onPressed: () {},
                                   style: ElevatedButton.styleFrom(

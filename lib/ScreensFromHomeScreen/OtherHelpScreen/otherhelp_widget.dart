@@ -24,7 +24,7 @@ class _OtherHelpScreenState extends State<OtherHelpScreen> {
           children: <Widget>[
             Expanded(
                 child: Container(
-                    margin: EdgeInsets.all(5),
+                    margin: const EdgeInsets.all(5),
                     child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
@@ -35,7 +35,7 @@ class _OtherHelpScreenState extends State<OtherHelpScreen> {
                             shape: const BeveledRectangleBorder(
                                 borderRadius: BorderRadius.all(Radius.zero))),
                         child: const FittedBox(
-                            child: const Text('Help with Feeding',
+                            child: Text('Help with Feeding',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     fontSize: 20,
@@ -43,7 +43,7 @@ class _OtherHelpScreenState extends State<OtherHelpScreen> {
                                         255, 255, 255, 255))))))),
             Expanded(
                 child: Container(
-                    margin: EdgeInsets.all(5),
+                    margin: const EdgeInsets.all(5),
                     child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
@@ -54,7 +54,7 @@ class _OtherHelpScreenState extends State<OtherHelpScreen> {
                             shape: const BeveledRectangleBorder(
                                 borderRadius: BorderRadius.all(Radius.zero))),
                         child: const FittedBox(
-                            child: const Text('Help With Medicine',
+                            child: Text('Help With Medicine',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     fontSize: 20,
@@ -62,7 +62,7 @@ class _OtherHelpScreenState extends State<OtherHelpScreen> {
                                         255, 255, 255, 255))))))),
             Expanded(
                 child: Container(
-                    margin: EdgeInsets.all(5),
+                    margin: const EdgeInsets.all(5),
                     child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
@@ -73,7 +73,7 @@ class _OtherHelpScreenState extends State<OtherHelpScreen> {
                             shape: const BeveledRectangleBorder(
                                 borderRadius: BorderRadius.all(Radius.zero))),
                         child: const FittedBox(
-                            child: const Text('Help With Restroom',
+                            child: Text('Help With Restroom',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     fontSize: 20,

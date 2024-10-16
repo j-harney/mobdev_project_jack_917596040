@@ -24,7 +24,7 @@ class _PicturesScreenState extends State<PicturesScreen> {
               Container(
                   height: 100,
                   width: 100,
-                  margin: EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
                   child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
@@ -47,7 +47,7 @@ class _PicturesScreenState extends State<PicturesScreen> {
               Container(
                   height: 100,
                   width: 100,
-                  margin: EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
                   child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(

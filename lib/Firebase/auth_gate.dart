@@ -5,10 +5,16 @@ import 'package:project1_mobdev_jack_917596040/CreatorsForScreens/appbarcreator_
 import 'package:project1_mobdev_jack_917596040/CreatorsForScreens/drawercreator_widget.dart';
 import 'package:project1_mobdev_jack_917596040/HomeScreen/home_widget.dart';
 
-class AuthGate extends StatelessWidget {
-  AuthGate({super.key});
+class AuthGate extends StatefulWidget {
+  const AuthGate({super.key});
 
+  @override
+  State<AuthGate> createState() => _AuthGateState();
+}
+
+class _AuthGateState extends State<AuthGate> {
   AppBarCreator appBarCreator = AppBarCreator();
+
   DrawerCreator drawerCreator = DrawerCreator();
 
   @override
@@ -51,7 +57,7 @@ class AuthGate extends StatelessWidget {
             },
           );
         }
-        return HomeScreen();
+        return const HomeScreen();
       },
     ));
   }
